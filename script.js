@@ -4,7 +4,7 @@ window.addEventListener("load",()=>{
         navigator.geolocation.getCurrentPosition((position)=>{
             let lon= position.coords.longitude;
             let lat= position.coords.latitude;
-            const url=  `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=5a35f58fb830016d827c0ac77ff6d8ea`
+            const url=  `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&` + `lon=${lon}&appid=5a35f58fb830016d827c0ac77ff6d8ea`
             
 
             fetch(url).then((res)=>{
@@ -24,7 +24,7 @@ window.addEventListener("load",()=>{
 
 function searchByCity(){
     const place= document.getElementById('input').value;
-    const urlsearch= `http://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=5a35f58fb830016d827c0ac77ff6d8ea`;
+    const urlsearch= `https://api.openweathermap.org/data/2.5/weather?q=${place}&` + `appid=5a35f58fb830016d827c0ac77ff6d8ea`;
 
     fetch(urlsearch).then((res)=>{
         return res.json();
@@ -37,7 +37,7 @@ function searchByCity(){
 
 function weatherReport(data){
 
-    const urlcast= `http://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=5a35f58fb830016d827c0ac77ff6d8ea`;
+    const urlcast= `https://api.openweathermap.org/data/2.5/forecast?q=${data.name}&` + `appid=5a35f58fb830016d827c0ac77ff6d8ea`;
 
     fetch(urlcast).then((res)=>{
         return res.json();
@@ -57,7 +57,7 @@ function weatherReport(data){
         console.log(data.weather[0].description)
         
         let icon1= data.weather[0].icon;
-        let iconurl= "http://api.openweathermap.org/img/w/"+ icon1 +".png";
+        let iconurl= "https://api.openweathermap.org/img/w/"+ icon1 +".png";
         document.getElementById('img').src=iconurl
     })
 
