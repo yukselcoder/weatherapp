@@ -1,0 +1,24 @@
+Weather App
+This is a web application that provides weather information for the user's current location and any searched city. It uses the OpenWeatherMap API to retrieve the weather data.
+
+How to use
+Load the web application.
+If the browser supports geolocation and the user allows it, the application will retrieve the weather data for the user's current location.
+If the user wants to search for weather data of a different city, they can enter the city name in the search bar and click the search button.
+The application will display the current weather information for the chosen city and a 5-hour forecast and 7-day forecast for that city.
+Technologies used
+This application is built with the following technologies:
+
+HTML
+CSS
+JavaScript
+OpenWeatherMap API
+How to set up
+To set up this project, follow these steps:
+
+Clone the repository.
+Obtain an API key from OpenWeatherMap.
+Open the script.js file in a text editor.
+Replace the apikey variable value with the API key you obtained.
+Save the file.
+Open the index.html file in a web browser.
